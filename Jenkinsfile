@@ -23,21 +23,21 @@ pipeline {
                 }
             }
         }
-        stage('Build Frontend Docker Image') {
-            steps {
-                script {
-                    dir('frontend') {  // Assuming 'frontend' is the directory name in your repo
-                        docker.build("my-frontend-app", ".")
-                    }
-                }
-            }
-        }
-        stage('Run Frontend Docker Container') {
-            steps {
-                script {
-                    docker.image("my-frontend-app").run("-d -p 3000:3000")
-                }
-            }
-        }
+        // stage('Build Frontend Docker Image') {
+        //     steps {
+        //         script {
+        //             dir('frontend') {  // Assuming 'frontend' is the directory name in your repo
+        //                 docker.build("my-frontend-app", ".")
+        //             }
+        //         }
+        //     }
+        // }
+        // stage('Run Frontend Docker Container') {
+        //     steps {
+        //         script {
+        //             docker.image("my-frontend-app").run("-d -p 3000:3000")
+        //         }
+        //     }
+        // }
     }
 }
