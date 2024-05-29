@@ -9,7 +9,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://megatreemall3:danish123@cluster0.waktylq.mongodb.net/')
+mongoose.connect('mongodb+srv://ahsanfaizan:ahsan3249@cluster-1.hxzonyf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-1')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
@@ -30,7 +30,7 @@ app.get("/",  (req,res)=> {
 // Route to get user data
 app.get('/api/user', async (req, res) => {
   try {
-    const user = await User.findOne({email:"syedanish39@gmail.com"}); // Retrieve the first user found
+    const user = await User.findOne({email:"ahsan_faizan@outlook.com"}); // Retrieve the first user found
     res.json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
