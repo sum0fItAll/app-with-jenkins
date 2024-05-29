@@ -15,11 +15,11 @@ class MyAppTestCase(unittest.TestCase):
         self.driver = webdriver.Chrome(options=options)
 
     def test_homepage_loads(self):
-        self.driver.get("http://54.89.210.50:3000")
+        self.driver.get("http://52.55.80.172:3000")
         self.assertIn("React App", self.driver.title)
 
     def test_user_data_displayed(self):
-        self.driver.get("http://54.89.210.50:3000")
+        self.driver.get("http://52.55.80.172:3000")
         name_element = self.driver.find_element(By.XPATH, '//p[contains(text(), "Name:")]')
         self.assertTrue(name_element.is_displayed())
 
